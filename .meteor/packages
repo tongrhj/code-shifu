@@ -1,3 +1,6 @@
 standard-app-packages
 iron:router
 materialize:materialize
+standard-minifiers
+ecmascript
+insecure
