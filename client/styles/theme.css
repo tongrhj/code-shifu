@@ -43,3 +43,44 @@ button {
 #spinner {
   height: 300px;
 }
+
+.tutorCardList {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.profile-picture {
+  margin: -100px auto 0 auto;
+  transition: bottom .3s;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+  height: 200px;
+  width: 200px;
+}
+
+.skill-row {
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-bottom: 20px;
+}
+
+.skill-row .skill-card {
+  width: 33%;
+  border-radius: 10px;
+}
+
+.btn-floating.btn-xlarge {
+  width:80px;
+  height:80px;
+  line-height:80.5px;
+}
+
+.btn-floating.btn-xlarge i {
+  line-height:80px;
+}

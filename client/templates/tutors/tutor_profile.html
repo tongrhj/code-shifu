@@ -1,0 +1,60 @@
+<template name="tutorProfile">
+  <div class="parallax-container">
+    <div class="parallax"><img src="../images/parallax1.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="profile-picture" style="background: url('../images/sampleOffice.jpg') no-repeat;background-size: cover;">
+    </div>
+    <div class="row container">
+      <h2 class="header blue-grey-text text-darken-4 center-align">{{ name }}</h2>
+      {{> skillList}}
+    </div>
+
+    <!-- About Me -->
+    <div class="row container">
+      <div class="card-panel z-depth-0">
+        <h5 class="flow-text blue-grey-text text-darken-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+      </div>
+    </div>
+
+
+
+    <!-- Simulated reviewList -->
+    <div class="row container">
+      <h2 class="header blue-grey-text text-darken-3 left-align">Reviews</h2>
+
+      <!-- reviewCard -->
+      <div class="row">
+        <div class="card-panel grey lighten-5 z-depth-0">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="https://d8c5c6htbliiy.cloudfront.net/assets/reviews/rosa-4cad3a43d9c4eb6a774ed7845bd953b7.jpg" alt="" class="circle responsive-img">
+              <!-- Other dummy profile pics: https://d8c5c6htbliiy.cloudfront.net/assets/reviews/vinod-f4f45889d8352c22d377cf261a8a0ac4.jpg
+              https://d8c5c6htbliiy.cloudfront.net/assets/reviews/michelle-85087ae3612a7435772e1a8b7efe3d8b.jpg -->
+              <p class="blue-grey-text text-lighten-2 center-align"><b>Siti Humairah</b></p>
+            </div>
+            <div class="col s10">
+              <span class="blue-grey-text">
+                <img src="https://d8c5c6htbliiy.cloudfront.net/assets/star-on-0933daf59754ff688bf64d54f4fa2ec5.png">
+                <img src="https://d8c5c6htbliiy.cloudfront.net/assets/star-on-0933daf59754ff688bf64d54f4fa2ec5.png">
+                <img src="https://d8c5c6htbliiy.cloudfront.net/assets/star-on-0933daf59754ff688bf64d54f4fa2ec5.png">
+                <img src="https://d8c5c6htbliiy.cloudfront.net/assets/star-on-0933daf59754ff688bf64d54f4fa2ec5.png">
+                <!-- The only non-yellow star -->
+                <img src="https://d8c5c6htbliiy.cloudfront.net/assets/star-off-c44e2afe554f03e5f27d6611219ecbd0.png">
+                <br>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="../images/parallax2.jpg"></div>
+  </div>
+</template>
