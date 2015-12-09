@@ -5,5 +5,6 @@
 
 ###Meteor Web App
 ####Created with yeoman and meteor-generator
+####ECMAScript 6
 
 **UI Library**: Materialize
