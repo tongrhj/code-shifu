@@ -26,3 +26,20 @@ button {
   background: #eee;
   padding: 10px 20px;
 }
+
+.alert { /* could not find Materialize alert */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+#spinner {
+  height: 300px;
+}
