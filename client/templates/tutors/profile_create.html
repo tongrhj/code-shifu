@@ -1,0 +1,18 @@
+<template name="profileCreate">
+  <div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" name="first_name" value="" placeholder="Tell us who you are" id="first_name" class="validate">
+        <label for="first_name">First Name</label>
+        <span class="help-block">{{errorMessage 'first_name'}}</span>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" name="last_name" value="" id="last_name" class="validate" placeholder="">
+        <label for="last_name">Last Name</label>
+        <span class="help-block">{{errorMessage 'last_name'}}</span>
+      </div>
+    </div>
+  </form>
+</div>
+</template>
