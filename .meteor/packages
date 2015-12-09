@@ -1,3 +1,9 @@
 standard-app-packages
 iron:router
 materialize:materialize
+accounts-password
+check
+audit-argument-checks
+sacha:spin
+accounts-facebook
+facebook
