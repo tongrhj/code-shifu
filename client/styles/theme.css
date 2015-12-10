@@ -3,7 +3,9 @@ body {
   background: #242424;
 }
 .container {
-  width: 960px;
+  max-width: 960px;
+  min-width: 300px;
+  width: 90vw;
   margin: 0 auto;
 }
 .jumbotron {
@@ -13,7 +15,7 @@ body {
   line-height: 1.5;
   color: #222;
   background-color: #eee;
-  border-radius: 13px;
+  border-radius: 10px;
   font-family: "Helvetica Neue Ultra Light", "Helvetica Neue", "Arial Narrow", "Arial", sans-serif;
 }
 h1 {
@@ -44,9 +46,10 @@ button {
   height: 300px;
 }
 
-.tutorCardList {
-  display:flex;
-  flex-wrap: wrap;
+.btn#load-more {
+  width: 100%;
+  height:auto;
+  padding:25px;
 }
 
 .profile-picture {
