@@ -1,9 +1,10 @@
-Meteor.publish('tutors', (options) => {
+Meteor.publish('tutors', function (selector, options) {
   check(options, {
     sort: Object,
     limit: Number
   })
-  return Tutors.find({}, options)
+  check (selector, Object)
+  return Tutors.find(selector, options)
 })
 
 Meteor.publish('singleTutor', (id) => {

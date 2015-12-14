@@ -2,13 +2,12 @@
   <div class="container">
     <div class="jumbotron">
       <h2>Shifu List</h2>
-      <button class="btn btn-default" type="button">Try Session.set</button>
-      {{#if myAppVariable}}
-      <h3>{{myAppVariable}}</h3>
-      {{/if}}
+      {{> searchBox}}
+      {{> javascriptFilterBtn}}
     </div>
   </div>
 
-  {{> tutorList}}
+  {{> searchResult}}
+  <!-- {{> tutorList}} -->
 
 </template>
