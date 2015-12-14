@@ -1,4 +1,4 @@
-SearchSource.defineSource('tutors', function(searchText) {
+SearchSource.defineSource('tutors', (searchText) => {
   if(searchText) {
     const regExp = buildRegExp(searchText)
     const selector = {$or: [

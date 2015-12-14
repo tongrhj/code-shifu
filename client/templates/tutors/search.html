@@ -1,5 +1,8 @@
 <template name="searchBox">
-  <input type="text" id="search-box" placeholder="search tutors here" />
+  <label for="search">
+    <i class="material-icons">search</i>
+  </label>
+  <input type="text" id="search-box" placeholder="seek your shifu" />
 </template>
 
 <template name="searchResult">
@@ -32,8 +35,4 @@
     </div>
     {{/each}}
   </div>
-</template>
-
-<template name="javascriptFilterBtn">
-  <a id="js-filter-btn" class="btn-floating btn-xlarge waves-effect waves-light red"><i class="material-icons">chat_bubble</i></a>
 </template>
