@@ -11,8 +11,11 @@
       <a href="#" class="brand-logo center">Code Shifu</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="about.html">About</a></li>
+        <!-- <li><a href="{{pathFor 'profileCreate'}}">Create Profile(Not Tutor)</a></li> -->
+        <li><a href="{{pathFor 'tutorProfileCreate'}}">Create Tutor Profile</a></li>
+        <li class="right hide-on-med-and-down">{{> loginButtons align="right"}}</li>
       </ul>
-    </div>
+     </div>
   </nav>
 </body>
 

@@ -1,4 +1,20 @@
 Meteor.publish('tutors', () => Tutors.find())
+Meteor.publish('profiles', function () { return Profiles.find({}) })
+
+// Meteor.publish('tutors', function (selector, options) {
+//   check(options, {
+//     sort: Object,
+//     limit: Number
+//   })
+//   check (selector, Object)
+//   return Tutors.find(selector, options)
+// })
+
+Meteor.publish('singleTutor', (id) => {
+  check(id, String)
+  return Tutors.find(id)
+})
+
 // Meteor.publish('tutors',function(username){
 //     // simulate network latency by sleeping 2s
 //     Meteor._sleepForMs(2000);

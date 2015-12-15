@@ -3,7 +3,9 @@ body {
   background: #242424;
 }
 .container {
-  width: 960px;
+  max-width: 960px;
+  min-width: 300px;
+  width: 90vw;
   margin: 0 auto;
 }
 .jumbotron {
@@ -13,7 +15,7 @@ body {
   line-height: 1.5;
   color: #222;
   background-color: #eee;
-  border-radius: 13px;
+  border-radius: 10px;
   font-family: "Helvetica Neue Ultra Light", "Helvetica Neue", "Arial Narrow", "Arial", sans-serif;
 }
 h1 {
@@ -42,4 +44,46 @@ button {
 
 #spinner {
   height: 300px;
+}
+
+.btn#load-more {
+  width: 100%;
+  height:auto;
+  padding:25px;
+}
+
+.profile-picture {
+  margin: -100px auto 0 auto;
+  transition: bottom .3s;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+  height: 200px;
+  width: 200px;
+}
+
+.skill-row {
+  display:flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-bottom: 20px;
+}
+
+.skill-row .skill-card {
+  width: 33%;
+  border-radius: 10px;
+}
+
+.btn-floating.btn-xlarge {
+  width:80px;
+  height:80px;
+  line-height:80.5px;
+}
+
+.btn-floating.btn-xlarge i {
+  line-height:80px;
 }

@@ -15,22 +15,27 @@ Template.profileCreate.events({
   'submit form': function(e) {
     e.preventDefault();
 
-    var profile = {
+    var profileFields = {
       first_name: $(e.target).find('[name=first_name]').val(),
-      last_name: $(e.target).find('[name=last_name]').val()
+      last_name: $(e.target).find('[name=last_name]').val(),
+      profileId: Meteor.user()._id // watch here
     };
 
-    var errors = validateProfile(profile);
+    console.log("profileFields ID: " + profileFields.profileId)
+
+    var errors = validateProfile(profileFields);
     if (errors.first_name || errors.last_name)
       return Session.set('profileCreateErrors', errors);
 
-    Meteor.call('profileSave', profile, function(error, result){
+    Meteor.call('profileInsert', profileFields, function(error, result){
       if (error)
         return throwError(error.reason);
-      //  yet to write section [incomplete]
-      // if (error.profileExists)
-      //   throwError('This profile already exists');
-      //
+      console.log(profileFields);
+      console.log("result :" + result);
+      // //
+      if (result.profileExists)
+         throwError('This profile already exists');
+
       // Router.go('profilePage', {_id: result._id});
     })
   }
