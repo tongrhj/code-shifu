@@ -2,6 +2,7 @@
   <title>Code Shifu | Find Your Programming Mentor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -10,12 +11,17 @@
       <a href="#" class="brand-logo center">Code Shifu</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="about.html">About</a></li>
+        <li><a href="{{pathFor 'tutorProfileCreate'}}">Create Tutor Profile</a></li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{> loginButtons align="right"}}
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {{> loginButtons align="right"}}
       </ul>
     </div>
   </nav>
+
 </body>
 
 <template name="layout">

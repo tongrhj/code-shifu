@@ -1,5 +1,17 @@
 <template name="tutorList">
-  {{#each tutors}}
-    {{> tutorCard}}
-  {{/each}}
+  <div class="row tutorCardList">
+    {{#each tutors}}
+      {{> tutorCard}}
+    {{/each}}
+
+    {{#if nextPath}}
+      <div class="col sm12 m12 l12 center-align">
+        <a id="load-more" class="waves-effect waves-light btn blue-grey lighten-1" href="{{ nextPath }}">See more</a>
+      </div>
+    {{else}}
+      {{#unless ready}}
+        {{> spinner}}
+      {{/unless}}
+    {{/if}}
+  </div>
 </template>
