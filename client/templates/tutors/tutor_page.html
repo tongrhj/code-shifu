@@ -1,5 +1,7 @@
 <template name="tutorPage">
   <div class="jumbotron">
-    {{> tutorCard}}
+    {{#each tutors}}
+    {{ first_name }} {{ last_name }} {{ githubUrl }}
+    {{/each}}
   </div>
 </template>
