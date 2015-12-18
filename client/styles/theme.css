@@ -1,6 +1,6 @@
 body {
   color: #eee;
-  background: #242424;
+  background: #fff;
 }
 
 nav {
@@ -9,6 +9,7 @@ nav {
   color: #263238;
   z-index: 1;
   position: absolute;
+  top:0;
 }
 
 nav .brand-logo {
@@ -19,11 +20,11 @@ nav .brand-logo {
 
 header {
   width: 100vw;
-  height: 100vh;
+  height: 55vh;
   background: linear-gradient(rgba(255,255,255,0.1),
 	 rgba(255,255,255,0.4)),
 	  url('../images/headerWatercolour.jpg');
-  background-size: auto 100vh;
+  background-size: 100vw auto;
   background-repeat: no-repeat;
   overflow-y: scroll;
   background-position: center top;
@@ -40,7 +41,7 @@ header {
 .search-bg {
   background-image: url('../images/headerWatercolour.jpg');
   background-repeat: no-repeat;
-  background-size: auto 100vh;
+  background-size: 100vw auto;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -98,7 +99,7 @@ header input[type=text]:focus:not([readonly]) {
 
 .filters {
   width: 100vw;
-  height: 200px;
+  height: 100px;
   background-color: #242424;
   align-items: center;
   justify-content: space-around;
@@ -188,4 +189,8 @@ button {
 
 .btn-floating.btn-xlarge i {
   line-height:80px;
+}
+
+.profile-edit-container {
+  margin-top: 64px;
 }

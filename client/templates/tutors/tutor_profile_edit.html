@@ -1,0 +1,73 @@
+<template name="tutorProfileEdit">
+  <div class="profile-edit-container">
+    <div class="section white">
+      <div class="row">
+        <h1>Edit | Shifu Profile</h1>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input value="{{ first_name }}" id="first_name" type="text" class="validate">
+              <label class="active" for="first_name2">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="email" type="email" class="validate">
+              <label for="profileEmail">Email</label>
+            </div>
+            <div class="input-field col s6">
+              <input disabled value="User ID" id="disabled" type="text" class="validate">
+              <label for="disabled">User ID (not editable)</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="githubUrl">Github Profile</label>
+            </div>
+          </div>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="about_me">About Me</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <h2>Skills You've Added</h2>
+                <div class="row">
+                  <a href="#" class="btn">Add New Skill</a>
+                </div>
+                <div class="" style="display:flex;align-content:center;justify-content:space-around;">
+                  {{#each expertise}}
+                    <div class="center-align skill-card">
+                     <div class="card">
+                       <div class="card-image">
+                         <img src="/images/javascriptSkill.png">
+                         <span class="card-title" style="visibility:hidden;">{{ skillname }}</span>
+                       </div>
+                       <div class="card-content">
+                         <h2 class="header blue-text text-darken-1 flow-text">${{ price }}/hr</h2>
+                       </div>
+                       <div class="card-action" style="text-align:right;">
+                           <a class="btn-floating btn-xlarge waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                       </div>
+                     </div>
+                    </div>
+                 {{/each}}
+                </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

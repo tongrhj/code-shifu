@@ -44,5 +44,10 @@ Template.javascriptFilterBtn.events({
     e.preventDefault()
     $('#search-box').val('MongoDB')
     $('#search-box').trigger('keyup', {ctrlKey: false, which: 40})
+  },
+  "click #reset-filter-btn"(e) {
+    e.preventDefault()
+    $('#search-box').val(' ')
+    $('#search-box').trigger('keyup', {ctrlKey: false, which: 40})
   }
 })

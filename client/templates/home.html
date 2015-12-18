@@ -12,7 +12,7 @@
   </header>
 
   <div class="filters valign-wrapper">
-        {{> javascriptFilterBtn}}
+    {{> javascriptFilterBtn}}
   </div>
 
   {{> searchResult}}
@@ -21,6 +21,7 @@
 </template>
 
 <template name="javascriptFilterBtn">
+  <a id="reset-filter-btn" class="valign waves-effect waves-light btn blue-grey">All</a>
   <a id="js-filter-btn" class="valign waves-effect waves-light btn blue-grey">Javascript</a>
   <a id="html-filter-btn" class="valign waves-effect waves-light btn blue-grey">HTML</a>
   <a id="mongodb-filter-btn" class="valign waves-effect waves-light btn blue-grey">MongoDB</a>
