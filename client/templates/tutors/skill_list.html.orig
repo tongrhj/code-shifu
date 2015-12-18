@@ -1,0 +1,23 @@
+<template name="skillList">
+  <div class="skill-row">
+    {{#each expertise}}
+      <div class="center-align skill-card">
+       <div class="card">
+         <div class="card-image">
+           <img src="../images/javascriptSkill.png">
+           <span class="card-title" style="visibility:hidden;">{{ skillname }}</span>
+         </div>
+         <div class="card-content">
+           <h2 class="header blue-text text-darken-1 flow-text">${{ price }}/hr</h2>
+         </div>
+         <div class="card-action" style="text-align:right;">
+           <p class="blue-grey-text">
+             Contact shifu today!
+             <a class="btn-floating btn-xlarge waves-effect waves-light red" style="margin-right:0px;margin-left:10px;"><i class="material-icons">chat_bubble</i></a>
+           </p>
+         </div>
+       </div>
+      </div>
+   {{/each}}
+  </div>
+ </template>
