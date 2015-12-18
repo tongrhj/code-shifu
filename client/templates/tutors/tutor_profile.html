@@ -1,13 +1,17 @@
 <template name="tutorProfile">
   <div class="parallax-container">
-    <div class="parallax"><img src="../images/parallax1.jpg"></div>
+    <div class="parallax"><img src="http://highlife.sk/wp-content/uploads/2014/04/vlcsnap-2013-01-07-19h51m47s102.jpg"></div>
   </div>
   <div class="section white">
-    <div class="profile-picture" style="background: url('../images/sampleOffice.jpg') no-repeat;background-size: cover;">
+    <div class="profile-picture" style="background: url('/images/sampleOffice.jpg') no-repeat;background-size: cover;">
     </div>
     <div class="row container">
       <h2 class="header blue-grey-text text-darken-4 center-align">{{ name }}</h2>
       {{> skillList}}
+    </div>
+
+    <div class="row container">
+      <a href="{{pathFor 'tutorProfileEdit'}}" class="btn">Edit</a>
     </div>
 
     <!-- About Me -->
@@ -53,6 +57,6 @@
 
   </div>
   <div class="parallax-container">
-    <div class="parallax"><img src="../images/parallax2.jpg"></div>
+    <div class="parallax"><img src="/images/parallax2.jpg"></div>
   </div>
 </template>

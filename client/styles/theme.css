@@ -1,7 +1,110 @@
 body {
   color: #eee;
-  background: #242424;
+  background: #fff;
 }
+
+nav {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  color: #263238;
+  z-index: 1;
+  position: absolute;
+  top:0;
+}
+
+nav .brand-logo {
+  color: #263238;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+header {
+  width: 100vw;
+  height: 55vh;
+  background: linear-gradient(rgba(255,255,255,0.1),
+	 rgba(255,255,255,0.4)),
+	  url('../images/headerWatercolour.jpg');
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  background-position: center top;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.search-container {
+  position:relative;
+  margin: 0 auto;
+}
+
+.search-bg {
+  background-image: url('../images/headerWatercolour.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+  background-position: center -200px;
+  -webkit-filter: blur(5px);
+  filter: url('../images/blur.svg');
+  filter: blur(5px);
+  padding: 20px 80px;
+}
+
+.search-input {
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255,0.5);
+}
+
+.search-input label {
+  position: absolute;
+  bottom: 70px;
+  left: 80px;
+}
+
+#search-box {
+  cursor: pointer;
+  margin: 0 auto 20px;
+  width: 24rem;
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  font-size: 24px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: .375em .75em;
+  transition: border 150ms ease-in, box-shadow 150ms ease-in;
+  border: none;
+  color: #263238;
+}
+
+header input::-webkit-input-placeholder,
+header input:-moz-placeholder,
+header input::-moz-placeholder,
+header input:-ms-input-placeholder {
+   color: #263238;
+}
+
+header input[type=text]:focus:not([readonly]) {
+  border-bottom: 2px solid #333;
+  box-shadow: 0 2px 0 0 #333;
+}
+
+.filters {
+  width: 100vw;
+  height: 100px;
+  background-color: #242424;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .container {
   max-width: 960px;
   min-width: 300px;
@@ -86,4 +189,8 @@ button {
 
 .btn-floating.btn-xlarge i {
   line-height:80px;
+}
+
+.profile-edit-container {
+  margin-top: 64px;
 }
