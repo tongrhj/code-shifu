@@ -4,11 +4,12 @@ body {
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0);
+  /*background-color: rgba(255, 255, 255, 0);*/
+  background: black;
   box-shadow: none;
   color: #263238;
   z-index: 1;
-  position: absolute;
+  position: relative;
   top:0;
 }
 
@@ -23,7 +24,7 @@ header {
   height: 55vh;
   background: linear-gradient(rgba(255,255,255,0.1),
 	 rgba(255,255,255,0.4)),
-	  url('../images/headerWatercolour.jpg');
+	  url('../images/csf-hori.png');
   background-size: 100vw auto;
   background-repeat: no-repeat;
   overflow-y: scroll;

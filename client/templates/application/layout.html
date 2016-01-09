@@ -5,6 +5,17 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Live Chat Widget powered by https://keyreply.com/chat/ -->
   <script id="keyreply-script" src="//keyreply.com/chat/widget.js" data-color="#009688" data-apps="JTdCJTIycGhvbmUlMjI6JTIyOTMzOTkxNTElMjIsJTIyZW1haWwlMjI6JTIyc3VwcG9ydEBjb2Rlc2hpZnUuY29tJTIyJTdE"></script>
+<!--
+  // Initialize collapse button
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+  //$('.button-collapse').sideNav({
+  //  menuWidth: 300, // Default is 240
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+    );
+  -->
 </head>
 
 <body>
@@ -14,12 +25,25 @@
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="about.html">About</a></li>
         <li><a href="{{pathFor 'tutorProfileCreate'}}">Create Tutor Profile</a></li>
+        <li><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
+        <li><a href="{{pathFor 'home'}}">Find Shifu</a></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {{> loginButtons align="right"}}
       </ul>
     </div>
   </nav>
+  <!-- <nav>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#!">First Sidebar Link</a></li>
+      <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <ul id="slide-out" class="side-nav">
+      <li><a href="#!">First Sidebar Link</a></li>
+      <li><a href="#!">Second Sidebar Link</a></li>
+    </ul>
+    <a href="#" onclick="$('.button-collapse').sideNav({menuWidth:300, edge:'left', closeOnClick: true})" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  </nav> -->
 
 </body>
 

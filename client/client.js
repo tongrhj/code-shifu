@@ -4,6 +4,7 @@ const options = {
   localSearch: true
 }
 
-const fields = ['name', 'expertise.skillname']
+const fields = ['name', 'expertise.skillname' ,'profileEmail']
 
 TutorSearch = new SearchSource('tutors', fields, options)
+ProfileSearch = new SearchSource('tutors', fields, options)

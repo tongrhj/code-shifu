@@ -21,7 +21,7 @@ Template.tutorProfileCreate.events({
       githubUrl: $(e.target).find('[name=githubUrl]').val(),
       profileEmail: $(e.target).find('[name=profileEmail]').val(),
       name: $(e.target).find('[name=first_name]').val() + ' ' + $(e.target).find('[name=last_name]').val(),
-      expertise: [],
+      expertise: [], // remember to clean data
       about_me: $(e.target).find('[name=about_me]').val() || "",
       reviews: {},
       tutorProfileId: Meteor.user()._id
@@ -37,7 +37,9 @@ Template.tutorProfileCreate.events({
       if (result.tutorProfileExists)
          throwError('This profile already exists');
 
+      // if(Tutors.findOne({tutorProfileId: Meteor.user()._id})) {window.alert("Profile already exists!")}
       window.alert("You have created your Shifu cred!")
+      Router.go('home')
     })
   }
 })
