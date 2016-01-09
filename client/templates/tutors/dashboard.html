@@ -1,4 +1,7 @@
 <template name="dashboard">
- {{ currentUser }}
+ <!-- {{ currentUser }} -->
+ <div>Welcome, {{ currentUsername }}.</div>
  {{ checkTutorProfileExists }}
+ {{> accountInfo }}
+ {{> tutorProfileCreateSkill }}
 </template>

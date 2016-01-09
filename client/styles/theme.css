@@ -1,5 +1,5 @@
 body {
-  color: #eee;
+  color: black;
   background: #fff;
 }
 
@@ -14,7 +14,7 @@ nav {
 }
 
 nav .brand-logo {
-  color: #263238;
+  color: #0f0;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -164,6 +164,26 @@ button {
   box-shadow: 0 1px 1px rgba(136,153,166,0.15);
   height: 200px;
   width: 200px;
+}
+
+#dash-avatar {
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+  height: 200px;
+  width: 200px;
+}
+
+.initials
+{
+width:120px;
+height:120px;
+border-radius:50%;
+font-size:50px;
+color:#000;
+line-height:120px;
+text-align:center;
+background:aquamarine;
 }
 
 .skill-row {

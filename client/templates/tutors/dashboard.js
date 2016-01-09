@@ -10,13 +10,16 @@ Template.dashboard.helpers ({
     var message = ''
     if(Tutors.findOne({tutorProfileId: Meteor.user()._id}))
     {
-    message = 'tutorprofile exists for this user!'
+    message = 'Here is your profile. Remember to save any changes made.'
     return message
     }
     else {
-    message = 'Tutorprofile does not exists!'
+    message = 'You do not have a tutor profile with us. Would you like to create one?'
     return message
     }
+  },
+  currentUsername: function () {
+    return Meteor.user().username
   }
 })
 
