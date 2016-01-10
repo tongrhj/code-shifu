@@ -5,7 +5,7 @@ Template.accountInfo.helpers({
   aboutMeText: function() {
     return Tutors.findOne({tutorProfileId: Meteor.user()._id}).about_me
   },
-  skillset: function() {
-    return Tutors.findOne({tutorProfileId: Meteor.user()._id}).expertise
+  userSkills: function() {
+    return Meteor.user().username
   }
 })
