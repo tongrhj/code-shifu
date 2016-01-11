@@ -19,12 +19,12 @@ Template.tutorProfileCreateSkill.events({
     console.log(currentUserId)
 
     var skillProperties = { // takes in skillname, proficiency and price from UI
-      skillname: $(e.target).find('[name=skillname]').val(),
-      proficiency: $(e.target).find('[name=proficiency]').val(),
-      price: $(e.target).find('[name=price]').val(),
-      tools: $(e.target).find('[name=tools]').val(),
-      projects: $(e.target).find('[name=projects]').val(),
-      philosophy: $(e.target).find('[name=philosophy]').val()
+      skillname: $(e.target).find('[name=skillname]').val(), // check against a set list (loose set)
+      proficiency: $(e.target).find('[name=proficiency]').val(), // years
+      price: $(e.target).find('[name=price]').val(), // price per hour
+      tools: $(e.target).find('[name=tools]').val(), // loose set
+      projects: $(e.target).find('[name=projects]').val(), //github urls
+      philosophy: $(e.target).find('[name=philosophy]').val() // textarea
     }
     console.log(skillProperties)
     var currentUser = Tutors.findOne({tutorProfileId: currentUserId});
