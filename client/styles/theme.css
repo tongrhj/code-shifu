@@ -27,16 +27,6 @@ nav .brand-logo {
   letter-spacing: 3px;
 }
 
-nav .modal {
-  display: block;
-  z-index: 1;
-}
-
-/*This should be deleted once Modals are working*/
-nav #register {
-  margin-top: 650px;
-}
-
 header {
   width: 100vw;
   height: 55vh;
@@ -66,7 +56,7 @@ header {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  /*z-index: 99;*/
+  z-index: 99;
   background-position: center -200px;
   -webkit-filter: blur(5px);
   filter: url('../images/blur.svg');
@@ -76,7 +66,7 @@ header {
 
 .search-input {
   position: relative;
-  /*z-index: 100;*/
+  z-index: 100;
   padding: 20px;
   background: rgb(255,255,255);
   background: rgba(255,255,255,0.5);
@@ -122,10 +112,6 @@ header input[type=text]:focus:not([readonly]) {
   background-color: #242424;
   align-items: center;
   justify-content: space-around;
-}
-
-.filters > a {
-  z-index: 0;
 }
 
 .container {
