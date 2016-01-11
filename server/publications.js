@@ -8,7 +8,7 @@ Meteor.publish('tutors', function (selector, options) {
 })
 
 Meteor.publish('tutorprofiles', function () {
-  return Tutors.find()
+  return Tutors.find({})
 }) //required to work
 
 Meteor.publish('singleTutor', (id) => {
