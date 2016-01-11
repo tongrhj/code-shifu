@@ -3,7 +3,6 @@ iron:router
 materialize:materialize
 standard-minifiers
 ecmascript
-insecure
 accounts-password
 check
 audit-argument-checks
