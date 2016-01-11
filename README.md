@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/tongrhj/code-shifu.png?label=ready&title=Ready)](https://waffle.io/tongrhj/code-shifu)
 # code-shifu
 ## GA WDI SG Project: Find a programming shifu
 
