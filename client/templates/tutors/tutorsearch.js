@@ -1,6 +1,6 @@
-Template.searchResult.helpers({
-  getTutors() {
-    return TutorSearch.getData({
+Template.testSearchResult.helpers({
+  getTutorsProfiles() {
+    return ProfileSearch.getData({
       transform (matchText, regExp) {
         console.log(matchText)
         return matchText.replace(regExp, '<span class="pink-text text-darken-2"><b>$&</b></span>')
@@ -9,18 +9,18 @@ Template.searchResult.helpers({
     })
   },
   isLoading() {
-    return TutorSearch.getStatus().loading
+    return ProfileSearch.getStatus().loading
   }
 })
 
-Template.searchResult.rendered = () => {
-  TutorSearch.search('');
+Template.testSearchResult.rendered = () => {
+  ProfileSearch.search('');
 }
 
-Template.searchBox.events({
+Template.testSearchBox.events({
   "keyup #search-box": _.throttle(function(e) {
     const text = $(e.target).val().trim()
-    TutorSearch.search(text)
+    ProfileSearch.search(text)
   }, 200),
 
   "click #search-box"(e) {

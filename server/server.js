@@ -3,7 +3,8 @@ SearchSource.defineSource('tutors', (searchText) => {
     const regExp = buildRegExp(searchText)
     const selector = {$or: [
       {'name': regExp},
-      {'expertise.skillname': regExp}
+      {'expertise.skillname': regExp},
+      {'profileEmail': regExp}
     ]}
     return Tutors.find(selector).fetch()
   } else {

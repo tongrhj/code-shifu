@@ -1,0 +1,20 @@
+<template name="testSearchBox">
+  <label for="search">
+    <i class="material-icons">search</i>
+  </label>
+  <input type="text" id="search-box" placeholder="seek your shifu" />
+</template>
+
+<template name="testSearchResult">
+  <div class="row tutorCardList">
+    <div id="search-meta">
+      {{#if isLoading}}
+        Searching ...
+      {{/if}}
+    </div>
+
+    {{#each getTutorsProfiles}}
+    {{> tutorCard}}
+    {{/each}}
+  </div>
+</template>

@@ -1,21 +1,40 @@
+.skill-card-icon {
+  font-size: 6em;
+}
+
 body {
-  color: #eee;
+  color: black;
   background: #fff;
 }
 
+#new-skill {
+  border: 5px dashed black;
+}
+
 nav {
-  background-color: rgba(255, 255, 255, 0);
+  /*background-color: rgba(255, 255, 255, 0);*/
+  background: black;
   box-shadow: none;
   color: #263238;
   z-index: 1;
-  position: absolute;
+  position: relative;
   top:0;
 }
 
 nav .brand-logo {
-  color: #263238;
+  color: #0f0;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+nav .modal {
+  display: block;
+  z-index: 1;
+}
+
+/*This should be deleted once Modals are working*/
+nav #register {
+  margin-top: 650px;
 }
 
 header {
@@ -23,7 +42,7 @@ header {
   height: 55vh;
   background: linear-gradient(rgba(255,255,255,0.1),
 	 rgba(255,255,255,0.4)),
-	  url('../images/headerWatercolour.jpg');
+	  url('../images/csf-hori.png');
   background-size: 100vw auto;
   background-repeat: no-repeat;
   overflow-y: scroll;
@@ -47,7 +66,7 @@ header {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  z-index: 99;
+  /*z-index: 99;*/
   background-position: center -200px;
   -webkit-filter: blur(5px);
   filter: url('../images/blur.svg');
@@ -57,7 +76,7 @@ header {
 
 .search-input {
   position: relative;
-  z-index: 100;
+  /*z-index: 100;*/
   padding: 20px;
   background: rgb(255,255,255);
   background: rgba(255,255,255,0.5);
@@ -103,6 +122,10 @@ header input[type=text]:focus:not([readonly]) {
   background-color: #242424;
   align-items: center;
   justify-content: space-around;
+}
+
+.filters > a {
+  z-index: 0;
 }
 
 .container {
@@ -163,6 +186,27 @@ button {
   box-shadow: 0 1px 1px rgba(136,153,166,0.15);
   height: 200px;
   width: 200px;
+}
+
+#dash-avatar {
+  border: 5px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+  height: 200px;
+  width: 200px;
+}
+
+.initials
+{
+width:120px;
+height:120px;
+border-radius:50%;
+font-size:50px;
+color:#000;
+line-height:120px;
+text-align:center;
+background:aquamarine;
+margin: 0 auto;
 }
 
 .skill-row {

@@ -7,6 +7,10 @@ Meteor.publish('tutors', function (selector, options) {
   return Tutors.find(selector, options)
 })
 
+Meteor.publish('tutorprofiles', function () {
+  return Tutors.find()
+}) //required to work
+
 Meteor.publish('singleTutor', (id) => {
   check(id, String)
   return Tutors.find(id)
