@@ -1,3 +1,7 @@
+.skill-card-icon {
+  font-size: 6em;
+}
+
 body {
   color: black;
   background: #fff;
@@ -188,6 +192,7 @@ color:#000;
 line-height:120px;
 text-align:center;
 background:aquamarine;
+margin: 0 auto;
 }
 
 .skill-row {
