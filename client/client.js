@@ -5,5 +5,5 @@ const options = {
 }
 
 const fields = ['name', 'expertise.skillname' ,'profileEmail']
-
+console.log(fields)
 ProfileSearch = new SearchSource('tutors', fields, options)

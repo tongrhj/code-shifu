@@ -11,6 +11,9 @@ Template.searchResult.helpers({
   isLoading() {
     return ProfileSearch.getStatus().loading
   },
+  // data : function () {
+  //   return Meteor.subscribe('all-tutors')
+  // }
 })
 
 Template.searchResult.rendered = () => {

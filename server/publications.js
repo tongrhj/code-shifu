@@ -15,3 +15,7 @@ Meteor.publish('singleTutor', (id) => {
 Meteor.publish('dash-tutors', function () {
   return Tutors.find()
 })
+
+Meteor.publish('all-tutors', function () {
+  return Tutors.find()
+})
