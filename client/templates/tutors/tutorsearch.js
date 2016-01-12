@@ -1,4 +1,4 @@
-Template.testSearchResult.helpers({
+Template.searchResult.helpers({
   getTutorsProfiles() {
     return ProfileSearch.getData({
       transform (matchText, regExp) {
@@ -10,14 +10,14 @@ Template.testSearchResult.helpers({
   },
   isLoading() {
     return ProfileSearch.getStatus().loading
-  }
+  },
 })
 
-Template.testSearchResult.rendered = () => {
+Template.searchResult.rendered = () => {
   ProfileSearch.search('');
 }
 
-Template.testSearchBox.events({
+Template.searchBox.events({
   "keyup #search-box": _.throttle(function(e) {
     const text = $(e.target).val().trim()
     ProfileSearch.search(text)

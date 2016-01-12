@@ -1,5 +1,5 @@
 Template.dashboard.helpers ({
-  tutorprofiles: function () {
+  tutors: function () {
     return Tutors.find()
   },
   currentUser: function() {
@@ -19,13 +19,13 @@ Template.dashboard.helpers ({
     }
   },
   currentUsername: function () {
-    return Meteor.user().username
+    return Meteor.user().emails[0].address
   }
 })
 
 
 Template.home.helpers ({
-  tutorprofiles: function () {
+  tutors: function () {
     return Tutors.find()
   }
 })
