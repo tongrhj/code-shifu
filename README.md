@@ -5,11 +5,11 @@
 
 [![Stories in Ready](https://badge.waffle.io/tongrhj/code-shifu.png?label=ready&title=Ready)](https://waffle.io/tongrhj/code-shifu)
 
-A meteor web app to empower hesitant Singaporeans to pick up coding by providing them with a comprehensive directory of programming Tutors (Code Shifus) that they can consult.
+A meteor web app to empower programmers to hone their skills by providing them with a comprehensive directory of programming tutors (Code Shifus) that they can consult.
 
 Comprises:
 1. **A directory of Code Shifus**: search by name or programming language/ skill
-2. **Customizeable Shifu Profiles**: each tutor has a customizeable tutor profile where they list their programming expertise, suggested rates, and a brief 'About Me'
+1. **Customizeable Shifu Profiles**: each tutor has a customizeable tutor profile where they list their programming expertise, suggested rates, and a brief 'About Me'
 
 ## Project Approach
 1. Storing and retrieving user account information from MongoDB database
@@ -27,7 +27,7 @@ Comprises:
 * Jerry Tan - @jerrygraced
 
 ## Tools and Framewoks
-* Meteor
-* Yeoman
+* Meteor + Searchsource
+* Yeoman + Meteor-generator
 * Materialize
 * Waffle.io
