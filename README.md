@@ -8,13 +8,14 @@
 A meteor web app to empower programmers to hone their skills by providing them with a comprehensive directory of programming tutors (Code Shifus) that they can consult.
 
 Comprises:
+
 1. **A directory of Code Shifus**: search by name or programming language/ skill
-1. **Customizeable Shifu Profiles**: each tutor has a customizeable tutor profile where they list their programming expertise, suggested rates, and a brief 'About Me'
+1. **Customizeable Shifu Profiles**: each tutor has a customizeable profile where they list their programming expertise, suggested rates, and a brief 'About Me'
 
 ## Project Approach
 1. Storing and retrieving user account information from MongoDB database
 1. Allow user logins via Github and Google and local accounts
-1. Building a meteor app to search and filter through tutor publication
+1. Using Meteor Searchsource to search and filter through tutor publication
 1. Crafting an exceptional user experience with visually arresting images and smooth transitions with Materialize UI Library
 
 ## Fun To Do's
