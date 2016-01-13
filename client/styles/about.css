@@ -1,0 +1,127 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top: 56px;
+}
+
+@media only screen and (min-width: 601px) {
+  .page {
+    top: 64px;
+  }
+}
+
+.about-page .cover {
+  background-image: url("https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn2/981552_347810472007719_83908702_o.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  z-index: -2;
+}
+
+.about-page .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+}
+
+.about-page .title {
+  color: #fff;
+  font-size: 6vh;
+  background-color: rgba(64, 64, 64, 0.5);
+  display: inline-block;
+  padding: 0 20px;
+  margin-left: 10vw;
+  margin-right: auto;
+}
+
+.about-page .title:first-child {
+  margin-top: 55vh;
+}
+
+.about-page .title:last-child {
+  margin-top: 2vh;
+}
+
+.about-page > section {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
+.about-page > section:not(:first-child) {
+  padding: 10vh 10vw;
+}
+
+.about-page > section:nth-of-type(even) {
+  background-color: #f0f0f0;
+}
+
+.about-page > section:nth-child(2) {
+  background-image: url("http://i1.kym-cdn.com/photos/images/original/001/061/888/3b1.gif");
+  background-size: 30%;
+  background-position: 90% 30%;
+  background-attachment: fixed;
+}
+
+.about-page > section:nth-child(2) > div {
+  width: 50%;
+  font-size: 2vh;
+  text-align: justify;
+  margin-top: 5vh;
+}
+
+.about-page > section:nth-child(3) {
+  background-image: url("http://www.ppchero.com/wp-content/uploads/2016/01/Audience.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-page > section > .header {
+  display: block;
+  color: #313335;
+  font-size: 5vh;
+}
+
+.about-page > section:last-child > ul > li {
+  margin-left: 20vw;
+}
+
+.about-page > section:last-child > ul > li:nth-of-type(odd) {
+  font-size: 3.5vh;
+  margin-top: 2vh;
+}
+
+.about-page > section:last-child > ul > li:nth-of-type(even) {
+  font-size: 1.75vh;
+  text-align: justify;
+  margin-right: 10vw;
+}
+
+.about-page > section:last-child > ul > li::before {
+  /*background-image: url("https://avatars3.githubusercontent.com/u/4006484");
+  background-size: 10px 20px;
+  width: 10px;
+  height: 20px;*/
+  display: block;
+    width: 20px;
+    height: 10px;
+  transform: scale(.3);
+  position: relative;
+  right: 250px;
+  top: 30px;
+}
+
+.about-page > section:last-child > ul > li:nth-of-type(1)::before {
+content:url("https://avatars3.githubusercontent.com/u/4006484");
+}
+
+.about-page > section:last-child > ul > li:nth-of-type(3)::before {
+content:url("https://avatars3.githubusercontent.com/u/914591");
+}
+
+.about-page > section:last-child > ul > li:nth-of-type(5)::before {
+content:url("https://avatars3.githubusercontent.com/u/15546006");
+}
