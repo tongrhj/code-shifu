@@ -27,5 +27,17 @@ Template.dashboard.helpers ({
 Template.home.helpers ({
   tutors: function () {
     return Tutors.find()
+  },
+  instantiate: function () {
+    const options = {
+      keepHistory: 1000 * 60 * 5,
+      localSearch: true
+    }
+    console.log('hellooooooo')
+    const fields = ['name', 'expertise.skillname']
+
+    TutorSearch = new SearchSource('tutors', fields, options)
+    console.log(TutorSearch)
+    // return TutorSearch
   }
 })

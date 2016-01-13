@@ -1,3 +1,15 @@
+// Template.searchResult.onRendered(function () {
+//   const options = {
+//     keepHistory: 1000 * 60 * 5,
+//     localSearch: true
+//   }
+//
+//   const fields = ['name', 'expertise.skillname']
+//
+//   TutorSearch = new SearchSource('tutors', fields, options)
+//   console.log(TutorSearch)
+// })
+
 Template.searchResult.helpers({
   getTutors() {
     return TutorSearch.getData({
