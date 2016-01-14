@@ -1,12 +1,26 @@
 Template.dashboard.helpers ({
+  signupMessage: function () {
+    return "Create an account to begin!"
+  },
   tutors: function () {
     return Tutors.find()
   },
   currentUser: function() {
     return Meteor.user()._id;
   },
-
   checkTutorProfileExists: function () {
+    if(Tutors.findOne({tutorProfileId: Meteor.user()._id}))
+    {
+    console.log('profile exists')
+    return true
+    }
+    else {
+    console.log('profile does not exist')
+    return false
+    }
+  },
+
+  profileExistsMessage: function () {
     var message = ''
     if(Tutors.findOne({tutorProfileId: Meteor.user()._id}))
     {

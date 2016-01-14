@@ -1,8 +1,15 @@
 <template name="dashboard">
  <!-- {{ currentUser }} -->
+ {{#if currentUser}}
  <div>Welcome, {{ currentUsername }}.</div>
- {{ checkTutorProfileExists }}
+ {{ profileExistsMessage }}
+ {{#unless checkTutorProfileExists}}
+ {{> tutorProfileCreate }}
+ {{/unless}}
  {{> accountInfo }}
  {{> skillSet }}
  {{> tutorProfileCreateSkill }}
+ {{else}}
+  {{ signupMessage }}
+ {{/if}}
 </template>
