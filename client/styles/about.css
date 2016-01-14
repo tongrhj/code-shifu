@@ -5,14 +5,8 @@
   top: 56px;
 }
 
-@media only screen and (min-width: 601px) {
-  .page {
-    top: 64px;
-  }
-}
-
 .about-page .cover {
-  background-image: url("https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn2/981552_347810472007719_83908702_o.jpg");
+  background-image: url("http://photoseminars.mediabarndev.com/assets/dl/jay1.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -29,7 +23,7 @@
 
 .about-page .title {
   color: #fff;
-  font-size: 6vh;
+  font-size: 8vw;
   background-color: rgba(64, 64, 64, 0.5);
   display: inline-block;
   padding: 0 20px;
@@ -52,7 +46,7 @@
 }
 
 .about-page > section:not(:first-child) {
-  padding: 10vh 10vw;
+  padding: 14vh 10vw 5vh 10vw;
 }
 
 .about-page > section:nth-of-type(even) {
@@ -79,49 +73,80 @@
   background-attachment: fixed;
 }
 
-.about-page > section > .header {
+.about-page > section > a {
   display: block;
   color: #313335;
   font-size: 5vh;
 }
 
-.about-page > section:last-child > ul > li {
-  margin-left: 20vw;
+.about-page > section:last-child > div {
+  display: flex;
+  padding: 1vh 0;
 }
 
-.about-page > section:last-child > ul > li:nth-of-type(odd) {
-  font-size: 3.5vh;
-  margin-top: 2vh;
+.about-page > section:last-child > div:first-of-type {
+  padding-top: 4vh;
 }
 
-.about-page > section:last-child > ul > li:nth-of-type(even) {
-  font-size: 1.75vh;
-  text-align: justify;
-  margin-right: 10vw;
-}
-
-.about-page > section:last-child > ul > li::before {
-  /*background-image: url("https://avatars3.githubusercontent.com/u/4006484");
-  background-size: 10px 20px;
-  width: 10px;
-  height: 20px;*/
-  display: block;
-    width: 20px;
-    height: 10px;
-  transform: scale(.3);
+.about-page > section:last-child > div > div {
   position: relative;
-  right: 250px;
-  top: 30px;
+  width: 18vw;
+  height: 18vw;
+  overflow: hidden;
+  border-radius: 9vw;
 }
 
-.about-page > section:last-child > ul > li:nth-of-type(1)::before {
-content:url("https://avatars3.githubusercontent.com/u/4006484");
+.about-page > section:last-child > div > div > img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 }
 
-.about-page > section:last-child > ul > li:nth-of-type(3)::before {
-content:url("https://avatars3.githubusercontent.com/u/914591");
+.about-page > section:last-child > div > p {
+  width: 55vw;
+  position: relative;
+  left: 5vw;
+  font-size: 1.8vh;
+  text-align: justify;
+  margin-top: 0;
 }
 
-.about-page > section:last-child > ul > li:nth-of-type(5)::before {
-content:url("https://avatars3.githubusercontent.com/u/15546006");
+.about-page > section:last-child > div > p > span {
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+@media (orientation: landscape) {
+
+  .about-page .title {
+    font-size: 8vh;
+  }
+
+  .about-page > section:nth-child(2) > div {
+    font-size: 1.2vw;
+  }
+
+  /*Resize Our Team profile pic and text to avoid overflowing from screen in landscape mode*/
+  .about-page > section:last-child > div > div {
+    width: 11vw;
+    height: 11vw;
+    border-radius: 5.5vw;
+  }
+
+  .about-page > section:last-child > div > p {
+    font-size: 2.2vh;
+  }
+
+}
+
+@media only screen and (min-width: 601px) {
+  /*To compensate for Materialize increasing the title bar size */
+  .page {
+    top: 64px;
+  }
 }
