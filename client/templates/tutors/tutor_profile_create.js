@@ -19,10 +19,10 @@ Template.tutorProfileCreate.events({
       first_name: $(e.target).find('[name=first_name]').val(),
       last_name: $(e.target).find('[name=last_name]').val(),
       githubUrl: $(e.target).find('[name=githubUrl]').val(),
-      profileEmail: $(e.target).find('[name=profileEmail]').val(),
+      profileEmail: Meteor.user().emails[0].address,
       name: $(e.target).find('[name=first_name]').val() + ' ' + $(e.target).find('[name=last_name]').val(),
       expertise: [], // remember to clean data
-      about_me: $(e.target).find('[name=about_me]').val() || "",
+      about_me: $(e.target).find('[name=about_me]').val() || "Hello! Drop me a message to learn more!",
       reviews: {},
       tutorProfileId: Meteor.user()._id
     };

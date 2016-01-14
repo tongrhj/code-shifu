@@ -1,8 +1,16 @@
 <template name="dashboard">
  <!-- {{ currentUser }} -->
+ <div class="dash-pic"><img src="{{pic}}"></div>
+ {{#if currentUser}}
  <div>Welcome, {{ currentUsername }}.</div>
- {{ checkTutorProfileExists }}
+ {{ profileExistsMessage }}
+ {{#unless checkTutorProfileExists}}
+ {{> tutorProfileCreate }}
+ {{/unless}}
  {{> accountInfo }}
  {{> skillSet }}
  {{> tutorProfileCreateSkill }}
+ {{else}}
+  {{ signupMessage }}
+ {{/if}}
 </template>

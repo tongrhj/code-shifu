@@ -28,14 +28,11 @@
       <a href="#" class="brand-logo center">Code Shifu ✯</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="{{pathFor 'about'}}">About</a></li>
-        <li><a href="{{pathFor 'tutorProfileCreate'}}">Create Tutor Profile</a></li>
         <li><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
         <li><a href="{{pathFor 'home'}}">Find Shifu</a></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- {{> loginButtons align="right"}} -->
-        {{> logInButton}}
-        {{> registerButton}}
+        {{> loginButtons align="right"}}
       </ul>
     </div>
   </nav>
@@ -52,95 +49,6 @@
   </nav> -->
 
 </body>
-
-<template name="logInButton">
-  <!-- Button trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#sign-in">Sign In</a>
-  <!-- Popup modal -->
-  <div id="sign-in" class="modal">
-    <div class="modal-content">
-      <h3>Please Sign In</h3>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="username" type="text" class="validate">
-              <label for="username">Username</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Sign In</button>
-        </form>
-        <span href="#">Forgot your password?</span>
-      </div>
-      <h3>Or Create an Account</h3>
-      <a class="waves-effect waves-light btn red">Create an Account</a>
-    </div>
-  </div>
-</template>
-
-
-<template name="registerButton">
-  <!-- Button trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#register">Register Now</a>
-  <!-- Popup modal -->
-  <div id="register" class="modal">
-    <div class="modal-content">
-      <h3>Create an Account to Book a Shifu</h3>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="phone" type="tel" class="validate">
-              <label for="phone">Telephone Number</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email Address</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <div>
-            By clicking Register, you agree to our <span class="link">Terms</span> and that you have read our <span class="link">Privacy Policy</span>, including our Cookie Use.
-          </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Create An Account</button>
-        </form>
-      </div>
-      <h3>or</h3>
-      <a class="waves-effect waves-light btn red">Register as a Shifu</a>
-    </div>
-  </div>
-</template>
 
 <template name="layout">
   {{> yield}}

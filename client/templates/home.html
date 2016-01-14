@@ -5,19 +5,23 @@
         <div class="search-input">
           <h3 class="blue-grey-text text-darken-4">Code your destiny.</h3>
 
-          {{> testSearchBox}}
+          {{> searchBox}}
         </div>
       </div>
 
   </header>
 
   <div class="filters valign-wrapper">
+    <!-- {{#each tutors}}
+    {{ first_name }}
+    {{/each}} removing unnecessary testers lol-->
     {{> javascriptFilterBtn}}
   </div>
 <!-- {{#each tutorprofiles}}
 {{ name }}
 {{/each}} -->
-  {{> testSearchResult}}
+{{ instantiate }}
+  {{> searchResult}}
   <!-- {{> tutorList}} -->
 
 </template>

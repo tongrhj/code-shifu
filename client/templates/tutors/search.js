@@ -1,6 +1,18 @@
-Template.testSearchResult.helpers({
-  getTutorsProfiles() {
-    return ProfileSearch.getData({
+// Template.searchResult.onRendered(function () {
+//   const options = {
+//     keepHistory: 1000 * 60 * 5,
+//     localSearch: true
+//   }
+//
+//   const fields = ['name', 'expertise.skillname']
+//
+//   TutorSearch = new SearchSource('tutors', fields, options)
+//   console.log(TutorSearch)
+// })
+
+Template.searchResult.helpers({
+  getTutors() {
+    return TutorSearch.getData({
       transform (matchText, regExp) {
         console.log(matchText)
         return matchText.replace(regExp, '<span class="pink-text text-darken-2"><b>$&</b></span>')
@@ -9,18 +21,18 @@ Template.testSearchResult.helpers({
     })
   },
   isLoading() {
-    return ProfileSearch.getStatus().loading
+    return TutorSearch.getStatus().loading
   }
 })
 
-Template.testSearchResult.rendered = () => {
-  ProfileSearch.search('');
+Template.searchResult.rendered = () => {
+  TutorSearch.search('');
 }
 
-Template.testSearchBox.events({
+Template.searchBox.events({
   "keyup #search-box": _.throttle(function(e) {
     const text = $(e.target).val().trim()
-    ProfileSearch.search(text)
+    TutorSearch.search(text)
   }, 200),
 
   "click #search-box"(e) {
@@ -43,11 +55,6 @@ Template.javascriptFilterBtn.events({
   "click #mongodb-filter-btn"(e) {
     e.preventDefault()
     $('#search-box').val('MongoDB')
-    $('#search-box').trigger('keyup', {ctrlKey: false, which: 40})
-  },
-  "click #reset-filter-btn"(e) {
-    e.preventDefault()
-    $('#search-box').val(' ')
     $('#search-box').trigger('keyup', {ctrlKey: false, which: 40})
   }
 })

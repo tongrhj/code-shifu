@@ -2,6 +2,17 @@
   font-size: 6em;
 }
 
+.dash-pic {
+  display: flex;
+  justify-content: center;
+  transition: bottom .3s;
+  border: 5px solid #black;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+  /*height: 330px;
+  width: 330px;*/
+}
+
 body {
   color: black;
   background: #fff;
@@ -11,31 +22,37 @@ body {
   border: 5px dashed black;
 }
 
+/*nav .modal {
+  display: block;
+  z-index: 1;
+}*/
+
+/*This should be deleted once Modals are working*/
+/*nav #register {
+  margin-top: 650px;
+}*/
+
 nav {
   /*background-color: rgba(255, 255, 255, 0);*/
   background: black;
   box-shadow: none;
   color: #263238;
   z-index: 1;
-  position: fixed;
+  position: relative; /*cannot use fixed*/
   top:0;
 }
 
 nav .brand-logo {
-  color: #fff;
-  letter-spacing: 3px;
-  font-family: 'Aladin', cursive;
+  color: #0f0;
+  /*text-transform: uppercase;*/
+  letter-spacing: 4px;
+  font-family: 'Aladin';
 }
 
-nav .modal {
-  display: none;
-  z-index: 1;
-}
-
-/*This should be deleted once Modals are working*/
-nav #register {
-  margin-top: 650px;
-}
+.nav-wrapper > ul > a {
+    margin-right: 10px;
+    border-radius: 5px;
+ }
 
 .nav-wrapper > ul > a {
   margin-right: 10px;
@@ -47,7 +64,8 @@ header {
   height: 55vh;
   background: linear-gradient(rgba(255,255,255,0.1),
 	 rgba(255,255,255,0.4)),
-	  url('../images/headerWatercolour.jpg');
+	  url('../images/csf-hori.png');
+  /*background-size: 100vw auto;*/
   background-size: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;
@@ -71,7 +89,7 @@ header {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  /*z-index: 99;*/
+  z-index: 99;
   background-position: center -200px;
   -webkit-filter: blur(5px);
   filter: url('../images/blur.svg');
@@ -81,21 +99,21 @@ header {
 
 .search-input {
   position: relative;
-  /*z-index: 100;*/
+  z-index: 100;
   padding: 3px 30px;
   background: rgb(255,255,255);
   background: rgba(255,255,255,0.5);
-  border-radius: 20px;
+  border-radius: 5px;
+}
+
+.search-input > h3 {
+  font-family: 'Aladin';
 }
 
 .search-input label {
   position: absolute;
   bottom: 28px;
   left: 45px;
-}
-
-.search-input > h3 {
-  font-family: 'Aladin', cursive;
 }
 
 #search-box {
@@ -135,10 +153,10 @@ header input[type=text]:focus:not([readonly]) {
 }
 
 .filters > a {
-  z-index: 0;
-  margin-left: 30px;
-  border-radius: 10px;
-}
+    z-index: 0;
+    margin-left: 30px;
+    border-radius: 10px;
+ }
 
 .container {
   max-width: 960px;

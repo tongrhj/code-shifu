@@ -3,7 +3,6 @@ iron:router
 materialize:materialize
 standard-minifiers
 ecmascript
-insecure
 accounts-password
 check
 audit-argument-checks
@@ -14,3 +13,7 @@ accounts-ui
 accounts-google
 accounts-github
 meteorhacks:search-source
+ejson
+cfs:standard-packages
+yogiben:autoform-file
+cfs:filesystem
