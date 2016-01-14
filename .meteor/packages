@@ -16,3 +16,4 @@ meteorhacks:search-source
 ejson
 cfs:standard-packages
 yogiben:autoform-file
+cfs:filesystem
