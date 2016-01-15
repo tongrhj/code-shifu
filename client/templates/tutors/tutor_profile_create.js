@@ -19,7 +19,7 @@ Template.tutorProfileCreate.events({
       first_name: $(e.target).find('[name=first_name]').val(),
       last_name: $(e.target).find('[name=last_name]').val(),
       githubUrl: $(e.target).find('[name=githubUrl]').val(),
-      profileEmail: Meteor.user().emails[0].address,
+      profileEmail: $(e.target).find('[name=profileEmail]').val(),
       name: $(e.target).find('[name=first_name]').val() + ' ' + $(e.target).find('[name=last_name]').val(),
       expertise: [], // remember to clean data
       about_me: $(e.target).find('[name=about_me]').val() || "Hello! Drop me a message to learn more!",

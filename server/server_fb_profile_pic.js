@@ -18,6 +18,8 @@ var getFbPicture = function(accessToken) { // make async call to grab the pictur
 
 
 // during new account creation get user picture from Facebook and save it on user object
+// if(loggingInWithFB){
+
 Accounts.onCreateUser(function(options, user) {
   if(options.profile) {
     options.profile.picture = getFbPicture(user.services.facebook.accessToken);
@@ -25,3 +27,4 @@ Accounts.onCreateUser(function(options, user) {
   }
   return user;
 });
+// }

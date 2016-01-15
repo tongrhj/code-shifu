@@ -7,17 +7,19 @@
     </div>
     <div class="row container">
       <h2 class="header blue-grey-text text-darken-4 center-align">{{ name }}</h2>
+      {{#each expertise}}
       {{> skillList}}
+      {{/each}}
     </div>
 
     <div class="row container">
-      <a href="{{pathFor 'tutorProfileEdit'}}" class="btn">Edit</a>
+      <a href="{{pathFor 'tutorProfileEdit'}}" class="btn">Edit</a> <!-- add permissions only if owns profile -->
     </div>
 
     <!-- About Me -->
     <div class="row container">
       <div class="card-panel z-depth-0">
-        <h5 class="flow-text blue-grey-text text-darken-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+        <h5 class="flow-text blue-grey-text text-darken-1">{{ about_me }}</h5>
       </div>
     </div>
 

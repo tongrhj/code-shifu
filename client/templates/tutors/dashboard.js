@@ -33,7 +33,12 @@ Template.dashboard.helpers ({
     }
   },
   currentUsername: function () {
-    return Meteor.user().emails[0].address
+    // if(Meteor.user().emails[0].address){
+    // return Meteor.user().emails[0].address
+    // }
+    // else {
+      return (Tutors.findOne({tutorProfileId: Meteor.user()._id})).first_name
+    // }
   },
   pic: function () {
     var userProfile
