@@ -37,7 +37,8 @@ Template.dashboard.helpers ({
     // return Meteor.user().emails[0].address
     // }
     // else {
-      return (Tutors.findOne({tutorProfileId: Meteor.user()._id})).first_name
+      // return (Tutors.findOne({tutorProfileId: Meteor.user()._id})).first_name
+      return Meteor.user().profile.name // best code as profile will always have name
     // }
   },
   pic: function () {
@@ -47,17 +48,40 @@ Template.dashboard.helpers ({
     if(userProfile){
       return userProfile.picture
     }
+  },
+
+  settings: function() {
+    return {
+      position: "top",
+      limit: 10,
+      rules: [
+        {
+          token: '',
+          collection: Languages,
+          field: "skillname",
+          template: Template.language
+        },
+        {
+          token: '!',
+          collection: Languages,
+          field: "skillname",
+          options: '',
+          matchAll: true,
+          filter: { type: "autocomplete" },
+          template: Template.language
+        }
+      ]
+    };
   }
 })
 
 Template.dashboard.events({
-'click #get-facebook-pic': function(options, user) {
-  if(options.profile) {
-    options.profile.picture = getFbPicture(user.services.facebook.accessToken);
-    user.profile = options.profile; // We still want the default 'profile' behavior.
+  'click .initials': function () {
+    Meteor.subscribe('servicesData')
+    if(Meteor.user().services.github) {console.log('GITHUB!')}
+    console.log(Meteor.user().createdAt)
   }
-  return user;
-}});
+})
 
 Template.home.helpers ({
   tutors: function () {

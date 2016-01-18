@@ -40,6 +40,7 @@ cfs:upload-http@0.0.20
 cfs:worker@0.1.4
 check@1.1.0
 coffeescript@1.0.11
+dandv:caret-position@2.1.1
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.2
@@ -82,6 +83,7 @@ meteorhacks:picker@1.0.3
 meteorhacks:search-source@1.4.2
 minifiers@1.1.7
 minimongo@1.0.10
+mizzao:autocomplete@0.5.1
 mobile-status-bar@1.0.6
 momentjs:moment@2.10.6
 mongo@1.1.3

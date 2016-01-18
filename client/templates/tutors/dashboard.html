@@ -13,4 +13,9 @@
  {{else}}
   {{ signupMessage }}
  {{/if}}
+
+ {{> inputAutocomplete settings=settings id="msg" class="input-xlarge" placeholder="Chat..."}}
+ {{#textareaAutocomplete settings=settings id="msg"}}
+     {{myStartingText}}
+ {{/textareaAutocomplete}}
 </template>
