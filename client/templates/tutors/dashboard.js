@@ -48,30 +48,6 @@ Template.dashboard.helpers ({
     if(userProfile){
       return userProfile.picture
     }
-  },
-
-  settings: function() {
-    return {
-      position: "top",
-      limit: 10,
-      rules: [
-        {
-          token: '',
-          collection: Languages,
-          field: "skillname",
-          template: Template.language
-        },
-        {
-          token: '!',
-          collection: Languages,
-          field: "skillname",
-          options: '',
-          matchAll: true,
-          filter: { type: "autocomplete" },
-          template: Template.language
-        }
-      ]
-    };
   }
 })
 

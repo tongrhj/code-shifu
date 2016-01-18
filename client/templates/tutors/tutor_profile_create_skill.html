@@ -4,8 +4,9 @@
     <div class="row" id="new-skill">
 
       <div class="input-field col s6">
-        <input type="text" name="skillname" value="" placeholder="" id="skillname" class="validate">
-        <label for="Skillname">Skill Name</label>
+        <!-- <input type="text" name="skillname" value="" placeholder="" id="skillname" class="validate">
+        <label for="Skillname">Skill Name</label> -->
+        {{> inputAutocomplete settings=settings class="validate" placeholder="Skill Name" name="skillname" id="skillname"}}
         <!-- <span class="help-block">{{errorMessage 'first_name'}}</span> -->
       </div>
 

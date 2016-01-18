@@ -8,6 +8,26 @@ Template.tutorProfileCreateSkill.helpers({
   },
   errorClass: function (field) {
     return !!Session.get('tutorProfileCreateSkillErrors')[field] ? 'has-error' : '';
+  },
+  settings: function() {
+    return {
+      position: "bottom",
+      limit: 15,
+      rules: [
+        {
+          token: '',
+          collection: Languages,
+          field: "skillname",
+          template: Template.language,
+          options: 'i',
+          matchAll: false,
+        },
+        // other options
+        //   filter: { type: "autocomplete" },
+        //   noMatchTemplate: ''
+        // }
+      ]
+    };
   }
 });
 
