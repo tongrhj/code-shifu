@@ -50,16 +50,14 @@ Template.dashboard.helpers ({
   }
 })
 
-// Meteor.startup(function() {
-//   Template.dashboard.pic = function() {// helper function to display the pic on the page
-//     var userProfile;
-//     userProfile = Meteor.user().profile;
-//
-//     if(userProfile) { // logic to handle logged out state
-//       return userProfile.picture;
-//     }
-//   };
-// });
+Template.dashboard.events({
+'click #get-facebook-pic': function(options, user) {
+  if(options.profile) {
+    options.profile.picture = getFbPicture(user.services.facebook.accessToken);
+    user.profile = options.profile; // We still want the default 'profile' behavior.
+  }
+  return user;
+}});
 
 Template.home.helpers ({
   tutors: function () {

@@ -18,3 +18,5 @@ cfs:standard-packages
 yogiben:autoform-file
 cfs:filesystem
 service-configuration
+xolvio:cucumber
+velocity:console-reporter
